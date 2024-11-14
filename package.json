@@ -1,0 +1,15 @@
+{
+  "name": "@800/bw-webrtc-sdk",
+  "version": "1.0.0",
+  "description": "Our version of @bandwidth/bw-webrtc-sdk",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jssip": "^3.10.1"
+  }
+}

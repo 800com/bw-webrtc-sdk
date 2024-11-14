@@ -1,0 +1,12 @@
+# Packages
+node_modules/
+npm-debug.log
+
+# Configs
+.env
+
+# Build artifacts
+dist/
+
+# Browserstack
+logs/
