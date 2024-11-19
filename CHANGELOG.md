@@ -1,6 +1,20 @@
 # Changelog
 
 - **19 Nov 2024**
+  - Return JSSiP Session when placing a call
+
+  **Code Change**: Lines 1491-1497
+
+  ```javascript
+    r._setEnabledSendVideo(e === AudioCodesUA.instance.VIDEO);
+    
+    if (e === AudioCodesUA.instance.VIDEO) {
+      r._setEnabledReceiveVideo(!0);
+    }
+
+    return { call: r, rtcSession: n };
+
+- **19 Nov 2024**
   - Allow passing custom ice servers configuration
 
   **Code Change**: Lines 187

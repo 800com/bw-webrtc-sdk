@@ -1,4 +1,5 @@
-import { IncomingMessage, OutgoingRequest } from 'jssip';
+import { IncomingMessage, OutgoingRequest, } from 'jssip';
+import { RTCSession } from 'jssip/lib/RTCSession';
 
 declare module '@800/bw-webrtc-sdk' {
   interface AudioCodesUAListenersConfig {
@@ -45,7 +46,7 @@ declare module '@800/bw-webrtc-sdk' {
     setListeners(listeners: AudioCodesUAListenersConfig): void
     setJsSipLogger(logger: (message: string) => void): void
     setAcLogger(logger: (message: string) => void): void
-    call(useVideo: boolean, recipient: string, extraHeaders?: string[], extraOptions?: Reacord<string, unknown>): AudioCodesSession
+    call(useVideo: boolean, recipient: string, extraHeaders?: string[], extraOptions?: Reacord<string, unknown>): { call: AudioCodesSession, rtcSession: RTCSession }
     /**
      * Init caller
      * @param autoLogin default is true

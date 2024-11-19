@@ -1488,11 +1488,13 @@ class AudioCodesUA {
       n = this.jssipUA.call(i, o);
     o.mediaStream && (n._localMediaStreamLocallyGenerated = !0);
     let r = n.data.ac_session;
-    return (
-      r._setEnabledSendVideo(e === AudioCodesUA.instance.VIDEO),
-      e === AudioCodesUA.instance.VIDEO && r._setEnabledReceiveVideo(!0),
-      r
-    );
+    r._setEnabledSendVideo(e === AudioCodesUA.instance.VIDEO);
+    
+    if (e === AudioCodesUA.instance.VIDEO) {
+      r._setEnabledReceiveVideo(!0);
+    }
+
+    return { call: r, rtcSession: n };
   }
   sendMessage(e, i, s = "text/plain") {
     return (
