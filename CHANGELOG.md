@@ -1,5 +1,13 @@
 # Changelog
 
+- **19 Nov 2024**
+  - Allow passing custom ice servers configuration
+
+  **Code Change**: Lines 187
+
+  ```javascript
+   iceServers: s || [],
+
 - **14 Nov 2024**
   - Added a condition to check devices only in the browser.
 

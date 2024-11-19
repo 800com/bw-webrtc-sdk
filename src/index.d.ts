@@ -41,7 +41,7 @@ declare module '@800/bw-webrtc-sdk' {
      */
     setDtmfOptions(useWebRTC: boolean, dtmfDuration?: number, dtmfInterToneGap?: number): void
     isInitialized(): boolean
-    setServerConfig(addresses: string | string[], domain: string, iceServers?: string[]): void
+    setServerConfig(addresses: string | string[], domain: string, iceServers?: RTCConfiguration['iceServers']): void
     setListeners(listeners: AudioCodesUAListenersConfig): void
     setJsSipLogger(logger: (message: string) => void): void
     setAcLogger(logger: (message: string) => void): void

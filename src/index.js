@@ -180,11 +180,11 @@ class AudioCodesUA {
       (AudioCodesUA.ac_log(`AC: setCodecFilter ${JSON.stringify(e)}`),
       (this.codecFilter = this._cf_unpack(e)));
   }
-  setServerConfig(e, i, s = []) {
+  setServerConfig(e, i, s = null) {
     (this.serverConfig = {
       addresses: e,
       domain: i,
-      iceServers: this._convertIceList(s),
+      iceServers: s || [],
     }),
       AudioCodesUA.ac_log(
         `AC: setServerConfig() ${JSON.stringify(this.serverConfig)}`
